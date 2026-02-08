@@ -18,14 +18,14 @@ To compile this program, run:
 ```bash
 make
 ```
-## How to run it
-To compile this program, run:
+## Memory Leak test
+Run valgrind with these flags:
 
 ```bash
-make
+valgrind --leak-check=full --trace-children=yes ./pipex file1 cmd1 cmd2 file2
 ```
 
-## Memory Leak Test
+## Memory Leak Rule
 
 ```bash
 make valgrind
